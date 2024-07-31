@@ -17,7 +17,7 @@ public class TaskServiceImplementation implements TaskService {
     private TaskRepository taskRepository;
     @Override
     public Task createTask(Task task, String requesterRole) throws Exception {
-        if(!requesterRole.equals("ROLE_ADMIN")){
+        if(!requesterRole.equals("ADMIN")){
             throw new Exception("Only admin can create a task !!");
         }
         task.setStatus(TaskStatus.PENDING);
@@ -72,14 +72,15 @@ public class TaskServiceImplementation implements TaskService {
         return taskRepository.save(task);
     }
 
+
+
     @Override
-    public List<Task> assigneduserstask(Long userId,TaskStatus status) {
+    public List<Task> assignedUsersTask(Long userId,TaskStatus status) {
         List<Task> tasks = taskRepository.findByAssignedUserId(userId);
         List<Task> filteredTasks = tasks.stream()
                 .filter(task -> status == null || task.getStatus().name().equalsIgnoreCase(status.toString()))
                 .collect(Collectors.toList());
         return filteredTasks;
-        return tasks;
     }
 
     @Override
