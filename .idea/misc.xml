@@ -6,7 +6,14 @@
       <list>
         <option value="$PROJECT_DIR$/TaskUserService/pom.xml" />
         <option value="$PROJECT_DIR$/TaskMicroService/pom.xml" />
+        <option value="$PROJECT_DIR$/submission-microservice/pom.xml" />
+        <option value="$PROJECT_DIR$/SubmissionMicroservice/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/submission-microservice/pom.xml" />
+      </set>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>

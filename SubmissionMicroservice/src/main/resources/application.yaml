@@ -1,0 +1,18 @@
+server:
+  port: 5003
+
+spring:
+  application:
+    name: SUBMISSION-SERVICE
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/submssion-service
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+eureka:
+  client:
+    register-with-eureka: false
