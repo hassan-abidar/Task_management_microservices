@@ -3,5 +3,8 @@ package hassan.abidar.submissionmicroservice.repository;
 import hassan.abidar.submissionmicroservice.model.Submission;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface SubmissionRepository extends JpaRepository<Long, Submission> {
+import java.util.List;
+
+public interface SubmissionRepository extends JpaRepository<Submission, Long> {
+    List<Submission> findByTaskId(Long taskId);
 }
