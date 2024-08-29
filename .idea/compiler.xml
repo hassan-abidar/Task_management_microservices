@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eureka_server" />
+        <module name="SubmissionMicroservice" />
         <module name="TaskUserService" />
         <module name="TaskMicroService" />
-        <module name="SubmissionMicroservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +22,7 @@
       <module name="SubmissionMicroservice" options="-parameters" />
       <module name="TaskMicroService" options="-parameters" />
       <module name="TaskUserService" options="-parameters" />
+      <module name="eureka_server" options="-parameters" />
       <module name="submission-microservice" options="-parameters" />
     </option>
   </component>
